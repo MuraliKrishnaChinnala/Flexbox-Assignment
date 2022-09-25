@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.stretch-all-container {
+  display: flex;
+}
+
+.item {
+  height: 100px;
+  background-color: #a2cbfa;
+  margin: 10px 0.5%;
+}
+
+.item-with-basis {
+  flex-basis: 10%;
+  flex-grow: 1;
+  height: 100px;
+  background-color: #a2cbfa;
+  margin: 10px 0.5%;
+}
+
+.item-with-basis:nth-child(2n) {
+  flex-grow: 2;
+  border: 1px solid darkblue;
+}
+
+.grow-2 {
+  flex-grow: 1000;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.stretch-item {
+  flex-grow: 1;
+  height: 100px;
+  background-color: #a2cbfa;
+  margin: 10px 0.5%;
+}
+
+.item-basis {
+  flex-grow: 1;
+  flex-basis: 20%;
+  height: 100px;
+  background-color: #a2cbfa;
+  margin: 10px 0.5%;
+}
+
+.shrink-2 {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 0px;
+}
+
+.shrink-1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+}
+
+.stretch-mid-container {
+  display: flex;
+}
+
+/* Stretch Middle Section */
+.stretch-mid-item {
+  background-color: #a2cbfa;
+  height: 100px;
+  width: 100px;
+  flex-grow: 1;
+  /* A fixed width as the default */
+}
+
+.stretch-mid-center {
+  background-color: #a2cbfa;
+  border: 1px solid darkblue;
+  flex-grow: 100000;
+  margin: 0 16px 0 16px;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+/* Alternating Grid */
+.alternating-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.alternating-item {
+  width: 48%;
+  height: 100px;
+  background-color: #a2cbfa;
+  margin: 10px 1%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+/* 3x3 Grid */
+.three-by-three-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.three-by-three-item {
+  flex: 0 32%;
+  height: 100px;
+  background-color: #a2cbfa;
+  margin-bottom: 2%;
+}
+
+/* 3x3 Grid Constrained Proportions 1:1 */
+.constrained-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.constrained-item {
+  width: 32%;
+  background-color: #a2cbfa;
+  padding-bottom: 32%;
+  margin-bottom: 2%;
+}
+
+/* 3x3 Grid Constrained Proportions 16:9 */
+.constrained-proportions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.constrained-proportions-items {
+  width: 32%;
+  background-color: #a2cbfa;
+  padding-bottom: 18%;
+  margin-bottom: 2%;
+}
+
+/* Graph: Vertical Bars */
+.vertical-bars {
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.align-start {
+  align-self: flex-start;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.vertical-bar-1 {
+  width: 14%;
+  height: 40%;
+  background-color: #a2cbfa;
+}
+
+.vertical-bar-2 {
+  width: 14%;
+  height: 50%;
+  background-color: #a2cbfa;
+}
+
+.vertical-bar-3 {
+  width: 14%;
+  height: 60%;
+  background-color: #a2cbfa;
+}
+
+.vertical-bar-4 {
+  width: 14%;
+  height: 20%;
+  background-color: #a2cbfa;
+}
+
+.vertical-bar-5 {
+  width: 14%;
+  height: 30%;
+  background-color: #a2cbfa;
+}
+
+/* Graph: Horizontal Bars */
+.horizontal-bars {
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.horizontal-bar-1 {
+  width: 64%;
+  height: 10%;
+  background-color: #a2cbfa;
+}
+
+.horizontal-bar-2 {
+  width: 48%;
+  height: 10%;
+  background-color: #a2cbfa;
+}
+
+.horizontal-bar-3 {
+  width: 72%;
+  height: 10%;
+  background-color: #a2cbfa;
+}
+
+.horizontal-bar-4 {
+  width: 32%;
+  height: 10%;
+  background-color: #a2cbfa;
+}
+.horizontal-bar-5 {
+  width: 40%;
+  height: 10%;
+  background-color: #a2cbfa;
+}
+
+/* Vertical Stacked (Centered) */
+.vertically-stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-item {
+  height: 40px;
+  width: 80%;
+  background-color: #a2cbfa;
+  margin-bottom: 10px;
+}
+
+/* Masonry (or mosaic) */
+/* Force new columns */
+.masonry {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 580px;
+}
+
+.masonry-item {
+  width: 32%;
+  margin-bottom: 2%;
+  background-color: #a2cbfa;
+  height: 20%;
+}
+
+.masonry::before,
+.masonry::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+
+.masonry-item:nth-child(3n + 1) {
+  order: 1;
+}
+.masonry-item:nth-child(3n + 2) {
+  order: 2;
+}
+.masonry-item:nth-child(3n) {
+  order: 3;
+}
